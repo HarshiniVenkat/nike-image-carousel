@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Nike Image Carousel",
+  "version": "1.0.0",
+  "description": "Browse multiple product images directly from Nike search pages — no clicking in and back out.",
+
+  "host_permissions": [
+    "*://www.nike.com/*"
+  ],
+
+  "content_scripts": [
+    {
+      "matches": [
+        "*://www.nike.com/w/*",
+        "*://www.nike.com/*/w/*"
+      ],
+      "js": ["content/content.js"],
+      "css": ["styles/carousel.css"],
+      "run_at": "document_idle"
+    }
+  ]
+}
